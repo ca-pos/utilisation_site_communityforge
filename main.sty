@@ -1,0 +1,140 @@
+\usepackage[a4paper]{geometry}
+\usepackage{babel}
+%\usepackage{fontspec}
+
+% \usepackage{luaotfload}
+% \usepackage{kpfonts-otf}
+% \setmainfont{KpRoman}
+% \setsansfont{KpSans}
+% \setmonofont{KpMono}
+% \defaultfontfeatures{Numbers={Proportional,OldStyle}}
+
+\usepackage{makeidx}
+\makeindex
+
+
+\usepackage[clearempty]{titlesec}
+
+\renewcommand{\thechapter}{\Roman{chapter}}
+\titleformat{\chapter}[display]
+{\bfseries\huge}
+{\filleft\MakeUppercase{\Large\chaptertitlename}\hspace{1em}\huge\thechapter}
+{4ex}
+{\titlerule
+\vspace{2ex}%
+\filright}
+[\vspace{2ex}%
+\titlerule]
+
+\usepackage{fancyhdr}
+\setlength{\headheight}{16pt}
+\pagestyle{fancy}
+\renewcommand{\chaptermark}[1]{\markboth{\MakeUppercase{\small#1}}{}}
+\renewcommand{\sectionmark}[1]{\markright{\large#1}{}}
+\addtolength{\headwidth}{2cm}
+
+\usepackage[dvipsnames]{xcolor}
+\usepackage{soul,microtype,xspace,pifont,graphicx,wrapfig}
+\usepackage[bottom]{footmisc}
+\newlength{\retrait}
+\setlength{\retrait}{20pt}
+\usepackage[skip=2pt plus5pt,indent=\retrait]{parskip}
+
+\usepackage[many]{tcolorbox}
+\usepackage[nospace]{varioref}
+
+\newcommand{\ctext}[3][RGB]{%
+  \begingroup%
+  \definecolor{hlcolor}{#1}{#2}\sethlcolor{hlcolor}%
+  \hl{#3}%
+  \endgroup
+}
+
+\newcommand{\noncliquables}[1]{%
+%{\color{Brown}\ctext[RGB]{255,255,255}{«~#1~»}}%
+{\color{Brown}{«~#1~»}}%
+}
+\newcommand{\liensmenu}[1]{%
+{\color{white}\ctext[RGB]{108,55,5}{#1}}%
+}
+\newcommand{\autresliens}[1]{{\color{blue}{\setul{1pt}{}\ul{#1}}}}
+\newcommand{\liensdirects}[1]{\color{blue}\texttt{\setul{1pt}{}\ul{#1}}\color{Black}}
+
+\newcommand{\rem}[2][]{\paragraph*{Remarque#1.}{#2\medskip}}    % argument optionnel pour le s du pluriel
+\newcommand{\termecode}[1]{\texttt{#1}}
+
+\newcommand{\subsec}[1]{\subsection*{#1}\addcontentsline{toc}{subsection}{#1}}
+\newcommand{\ssubsec}[1]{\subsubsection*{#1}\addcontentsline{toc}{subsubsection}{#1}}
+
+\renewcommand{\thechapter}{\Roman{chapter}}
+\renewcommand{\thesection}{\Alph{section}. }
+\renewcommand{\thesubsection}{}%\arabic{subsection}}
+
+\newcommand{\TCBimportant}[1]{\begin{tcolorbox}[skin=enhanced,title=Important,
+    colframe=Sepia!50!black,colback=red!25!white,colbacktitle=red!15!BrickRed!80!white,
+    fonttitle=\bfseries,coltitle=White,attach boxed title to top center=
+    {yshift=-0.25mm-\tcboxedtitleheight/2,yshifttext=2mm-\tcboxedtitleheight/2},
+    boxed title style={boxrule=0.5mm,
+    frame code={ \path[tcb fill frame] ([xshift=-4mm]frame.west)
+    -- (frame.north west) -- (frame.north east) -- ([xshift=4mm]frame.east)
+    -- (frame.south east) -- (frame.south west) -- cycle; },
+    interior code={ \path[tcb fill interior] ([xshift=-2mm]interior.west)
+    -- (interior.north west) -- (interior.north east)
+    -- ([xshift=2mm]interior.east) -- (interior.south east) -- (interior.south west)
+    -- cycle;}
+    }]
+        #1
+\end{tcolorbox}}
+\newtcolorbox{mybox}[2][]{enhanced, breakable,
+before skip=2mm,after skip=2mm,
+colback=BlueGreen!15!white,colframe=black!50,boxrule=0.2mm,
+attach boxed title to top left={xshift=1cm,yshift*=1mm-\tcboxedtitleheight},
+varwidth boxed title*=-3cm,
+boxed title style={frame code={
+\path[fill=tcbcolback!50!black]
+([yshift=-1mm,xshift=-1mm]frame.north west)
+arc[start angle=0,end angle=180,radius=1mm]
+([yshift=-1mm,xshift=1mm]frame.north east)
+arc[start angle=180,end angle=0,radius=1mm];
+\path[left color=tcbcolback!60!black,right color=tcbcolback!60!black,
+middle color=tcbcolback!80!black]
+([xshift=-2mm]frame.north west) -- ([xshift=2mm]frame.north east)
+[rounded corners=1mm]-- ([xshift=1mm,yshift=-1mm]frame.north east)
+-- (frame.south east) -- (frame.south west)
+-- ([xshift=-1mm,yshift=-1mm]frame.north west)
+[sharp corners]-- cycle;
+},interior engine=empty,
+},
+fonttitle=\bfseries,
+title={#2},#1}
+%
+
+\newcommand{\cad}{c.-à-d.\xspace}
+\newcommand{\ex}{p.ex.\xspace}
+\newcommand{\CF}{\textsl{CommunityForge}\xspace}
+\newcommand{\CdS}{\textsl{Carrefour du \textsc{Sel}}\xspace}
+\newcommand{\sel}{\textsc{Sél}\xspace}
+\newcommand{\SEL}{SÉL\xspace}
+\newcommand{\aster}{%
+\begin{center}
+    \ast\par
+    %\ast\quad\ast
+\end{center}
+}%
+%\newcommand{\datedocument}{juin 2023\xspace}
+
+\setcounter{tocdepth}{3} % tdm jusqu'à subsubsection
+%
+%
+\makeatletter \@removefromreset{figure}{chapter} \makeatother % pas de remise à 0 des figures par chapitre
+\renewcommand\thefigure{\arabic{figure}} % seulement le numéro de figure dans la numérotation
+
+\graphicspath{{images/}}
+\tcbuselibrary{skins}
+
+\raggedbottom
+
+\usepackage{varwidth}
+\tcbuselibrary{breakable}
+
+\usepackage{afterpage}

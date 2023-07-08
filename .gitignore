@@ -1,0 +1,14 @@
+Parties/*.aux
+Parties/*-copy.*
+scripts/*
+notes/*
+ecm.*
+*.aux
+*.idx
+*.ilg
+*.ind
+*.lof
+*.log
+*.pdf
+*.toc
+*-copy.*
