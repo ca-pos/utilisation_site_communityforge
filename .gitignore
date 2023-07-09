@@ -1,5 +1,3 @@
-Parties/*.aux
-Parties/*-copy.*
 scripts/*
 notes/*
 ecm.*
@@ -12,3 +10,5 @@ ecm.*
 *.pdf
 *.toc
 *-copy.*
+.gitignore
+
