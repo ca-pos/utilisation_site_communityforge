@@ -1,4 +1,5 @@
-scripts/*
+scripts/lulu.bat
+scripts/sup*.bat
 notes/*
 ecm.*
 *.aux
@@ -9,6 +10,10 @@ ecm.*
 *.log
 *.pdf
 *.toc
+*.glg
+*.glo
+*.gls*
+*.xdy
 *-copy.*
 .gitignore
 
