@@ -1,12 +1,13 @@
 \chapter{Premiers pas}\label{chap:premiersPas}
 
 
-\TCBimportant{Même si vous n’avez pas l’intention d’utiliser le site par la suite, il est indispensable de suivre la procédure décrite dans la première section intitulée \og{}Activation du compte\fg{} sinon votre compte ne sera pas validé et vous ne recevrez aucun message (offres, demandes, etc.) de la part de votre \textsc{Sél}.}
+\TCBimportant{Même si vous n’avez pas l’intention d’utiliser le site par la suite, il est indispensable de suivre la procédure décrite dans la première section intitulée \og{}Activation du compte\fg{} sinon votre compte ne sera pas validé et vous ne recevrez aucun message (offres, demandes, etc.) de la part de votre \sel.}
 
 \section{Activation du compte}
 
 Vous avez reçu un message semblable à celui de la figure \ref{fig:messageInformation} (\vpageref{fig:messageInformation}) adressé à Charlotte \textsc{Arnaud}\footnote{Charlotte est une adhérente factice créée pour les besoins de ce tutoriel.}.
-Il signale que votre compte a été créé par un administrateur local; il vous appartient maintenant de l’activer.
+Il signale que votre compte a été créé par un \index{administrateur local}administrateur local; il vous appartient maintenant de l’activer.
+
 Seules les deux lignes surlignées en jaune ou en vert nous intéressent.
 \begin{figure}
     \includegraphics[width=\linewidth]{006-message_d_information}
@@ -25,16 +26,20 @@ Seules les deux lignes surlignées en jaune ou en vert nous intéressent.
 \end{figure}
 \begin{enumerate}
     \newcounter{noteProfilPasAJour}
-    \item Notez votre nom d’utilisateur (ligne surlignée en jaune), normalement votre prénom et votre nom --- si votre nom ne figure pas, il faudra effectuer une mise à jour de votre profil pour l'ajouter (voir la section \og{}Onglet Mes infos\fg, p. \pageref{page:completerInfosPerso})
-    \footnote{\setcounter{noteProfilPasAJour}{\value{footnote}}\label{page:profilPasAJour}\index{Profil!mise à jour}Certaines captures d'écran ont été faites avant que le profil de Charlotte \textsc{Arnaud} ait été mis à jour, si bien que seul le prénom apparaît (voir figure  \vref{fig:reinitialiserMdp}, et de nombreuses autres figures, notamment Fig. \ref{fig:menuUtilisateur}, p. \pageref{fig:menuUtilisateur}).}. 
+    \item Notez votre nom d’utilisateur (ligne surlignée en jaune), normalement votre prénom et votre nom --- si votre nom ne figure pas, il faudra effectuer une mise à jour de votre profil pour l'ajouter (voir la section \og{}Onglet Mes infos\fg, p. \pageref{page:completerInfosPerso})%
+    %%%
+    \footnote{\setcounter{noteProfilPasAJour}{\value{footnote}}\label{page:profilPasAJour}\index{Profil!mise à jour}Certaines captures d'écran ont été faites avant que le profil de Charlotte \textsc{Arnaud} ait été mis à jour, si bien que seul le prénom apparaît (voir figure  \vref{fig:reinitialiserMdp}, et de nombreuses autres figures, notamment Fig. \ref{fig:menuUtilisateur}, p. \pageref{fig:menuUtilisateur}).}.
+    %%% 
     \item Cliquez sur le lien surligné en vert ou recopiez-le dans la barre d’adresse de votre navigateur ---  ce lien n’est utilisable qu'une fois, nous verrons plus loin  comment se connecter par la suite.
     \item Vous arrivez sur la page de la figure \ref{fig:reinitialiserMdp} (\vpageref{fig:reinitialiserMdp}).
     \item Cliquez sur \autresliens{Se connecter} pour ouvrir la page de la figure \ref{fig:accepterRgpd}.
-    \item Cliquez sur \autresliens{J’accepte}\index{RGPD}\label{page:accepteRgpd}
-    \footnote{Vous avez le droit de ne pas accepter, vous resterez membre du Sél mais vous ne pourrez pas utiliser le site ni recevoir les courriels (offres, demandes, actualités, etc.).} 
+    \item Cliquez sur \autresliens{J’accepte}\index{RGPD}\label{page:accepteRgpd}%
+    %%%
+    \footnote{Vous avez le droit de ne pas accepter, pour cela, cliquez sur \autresliens{Je ne suis pas d'accord} au lieu de \autresliens{J'accepte}, vous resterez membre du \sel mais vous ne pourrez pas utiliser le site et surtout vous ne recevrez pas les courriels (offres, demandes, actualités, etc.).}
+    %%% 
     ce qui ouvre une nouvelle page (Fig. \vref{fig:choisirMdp})
     \item Choisissez un mot de passe puis confirmez-le.\index{mot de passe!définir}
-    \item Enfin, \textbf{n’oubliez pas une dernière étape indispensable}: descendez tout en bas de la page et cliquez sur le bouton \autresliens{Sauvegarder}, non visible à la figure \ref{fig:choisirMdp} --- mais visible Fig. \ref{fig:pageParametres}, p. \pageref{fig:pageParametres}, tout en bas.
+    \item Enfin, \textbf{n’oubliez pas une dernière étape indispensable}: descendez tout en bas de la page et cliquez sur le bouton \autresliens{Sauvegarder}, non visible à la figure \ref{fig:choisirMdp} (mais visible Fig. \ref{fig:pageParametres}, p. \pageref{fig:pageParametres}).
 \end{enumerate}
 
 \medskip
@@ -87,9 +92,12 @@ La seule petite subtilité de ce formulaire concerne l’identifiant qui peut ê
 
 \subsec{Mot de passe oublié}\label{sec:mdpOublie}
 \index{mot de passe!réinitialiser}
-Si vous avez oublié votre mot de passe, il est possible de demander sa réinitialisation en cliquant sur \autresliens{Demander un nouveau mot de passe} (Fig. \ref{fig:ecranConnexion}). Suivre ensuite une procédure assez semblable à celle décrite ci-dessus sauf que vous n’aurez, notamment, plus à accepter le RGPD.
+Si vous avez oublié votre mot de passe, il est possible de demander sa réinitialisation en cliquant sur \autresliens{Demander un nouveau mot de passe} (Fig. \ref{fig:ecranConnexion}). Suivre ensuite une procédure assez semblable à celle décrite ci-dessus sauf que vous n’aurez, notamment, plus à accepter le RGPD%
+%%%
+\footnote{Brièvement, vous recevrez un nouveau lien de connexion à usage unique (semblable à celui de la figure \ref{fig:messageInformation}), il faudra ensuite définir un nouveau mot de passe (Fig. \ref{fig:choisirMdp}) et enfin cliquer sur \autresliens{Sauvegarder} en bas de la page.}.
+%%%
 
-\rem{La réponse à votre demande d'un nouveau mot de passe sera envoyée par courriel; mais cette réponse peut venir rapidement ou pas, parfois immédiatement, parfois le lendemain … et parfois jamais. Dans ce  cas, contactez-moi, je vous attribuerai un mot de passe provisoire que vous pourrez ensuite changer (voir section \og{}Changer le mot de passe\fg, p. \pageref{sec:changerMotDePasse}).}
+\rem{En  cas de difficultés, contactez-moi, je vous attribuerai un mot de passe provisoire que vous pourrez ensuite changer (voir section \og{}Changer le mot de passe\fg, p. \pageref{sec:changerMotDePasse}).}
 
 \section{Où trouver les premières informations ?}\label{page:premieresInfos}
 
